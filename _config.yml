@@ -1,0 +1,21 @@
+title: Hoonio
+email: ""
+description: >
+  Root relaunch with Jekyll and Github Pages
+url: "https://hoonio.com"
+twitter_username: hoonio
+github_username:  hoonio
+
+repository: "hoonio/hoonio.github.io"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+header_pages:
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - update_boostrap.sh
