@@ -13,10 +13,9 @@ plugins:
   - jekyll-sitemap
 
 header_pages:
-  - index.md
   - blog/index.md
   - profile/index.md
-  - contact/index.md
+  - portfolio/index.md
 
 social_links:
   - name: facebook

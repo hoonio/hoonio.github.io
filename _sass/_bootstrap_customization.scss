@@ -326,3 +326,58 @@ legend {
     color: inherit;
   }
 }
+
+$homepage-cover-path: 'https://lh3.googleusercontent.com/-uxpIOwYZfCM/VvAE1gOGbGI/AAAAAAAC14A/vAgBkPaGDF8vN3MqG1C8UzMMbsZm-F3VACCo';
+$homepage-cover-fullsize: '/w2500-h1667-Ic42';
+$homepage-cover-tablet: '/w1536-h1024-Ic42';
+$homepage-cover-phone: '/w1400-h736-Ic42';
+$homepage-cover-filename: '/Modestas-Urbonas-bridge.jpeg';
+
+#home {
+  header {
+    background-image: -moz-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-phone+$homepage-cover-filename)});
+    background-image: -webkit-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), -webkit-image-set( url(#{($homepage-cover-path+$homepage-cover-phone+$homepage-cover-filename)}) 1x, url(#{($homepage-cover-path+$homepage-cover-fullsize+$homepage-cover-filename)}) 2x);
+    background-image: -ms-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-phone+$homepage-cover-filename)});
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-phone+$homepage-cover-filename)});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 35em;
+    height: 100vh;
+    @include media-breakpoint-up(md) {
+      background-image: -moz-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-tablet+$homepage-cover-filename)});
+      background-image: -webkit-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), -webkit-image-set( url(#{($homepage-cover-path+$homepage-cover-tablet+$homepage-cover-filename)}) 1x, url(#{($homepage-cover-path+$homepage-cover-fullsize+$homepage-cover-filename)}) 2x);
+      background-image: -ms-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-tablet+$homepage-cover-filename)});
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-tablet+$homepage-cover-filename)});
+    }
+    @include media-breakpoint-up(lg) {
+      background-image: -moz-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-fullsize+$homepage-cover-filename)});
+      background-image: -webkit-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),  url(#{($homepage-cover-path+$homepage-cover-fullsize+$homepage-cover-filename)});
+      background-image: -ms-linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-fullsize+$homepage-cover-filename)});
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#{($homepage-cover-path+$homepage-cover-fullsize+$homepage-cover-filename)});
+    }
+  }
+}
+
+.intro-text {
+    text-align: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+    height: 100vh;
+    p {
+      font-size: 1.5rem;
+      color: white;
+
+    }
+}
