@@ -18,7 +18,21 @@ header_pages:
   - profile/index.md
   - contact/index.md
 
+social_links:
+  - name: facebook
+    url: https://hoon.io/link2fb
+  - name: instagram
+    url: https://hoon.io/1wGEoKi
+  - name: youtube
+    url: https://hoon.io/link2yt
+
 footer_links:
+  - name: Dory
+    url: https://dory.hoonio.com
+  - name: Feria
+    url: https://feria.hoonio.com
+  - name: Wiki
+    url: http://wiki.hoonio.com
 
 exclude:
   - Gemfile

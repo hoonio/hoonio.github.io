@@ -1,40 +1,33 @@
-
 <div class="py-5 border-top">
   <div class="container">
-
-    <p class="h5 mb-3">{{ site.title | escape }}</p>
-
     <div class="row">
-
       <div class="col-sm">
-        <ul class="list-unstyled">
+        © 2006-<script>document.write(new Date().getFullYear())</script> 
+      <a href="{{ site.url }}">Hoonio Ltd.</a>
+      </div>
+      <div class="col-sm text-center">
+        <ul class="list-unstyled social-buttons">
+          {%- for social in site.social_links -%}
           <li>
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
+            <a href="{{ social.url }}">
+              <span class="hoonio hoonio-stack hoonio-lg">
+                <i class="hoonio hoonio-circle hoonio-stack-2x"></i>
+                <i class="hoonio hoonio-stack-1x hoonio-{{ social.name }}"></i>
+              </span>
+            </a>
           </li>
-          {%- if site.email -%}
-            <li>
-              <a href="mailto:{{ site.email }}">
-                {{ site.email }}
-              </a>
-            </li>
-          {%- endif -%}
+          {% endfor -%}
         </ul>
       </div>
-
-
       <div class="col-sm text-right">
-        <p>{{- site.description | escape -}}</p>
-
-        <p>
-          <a href="https://nicolas-van.github.io/bootstrap-4-github-pages/">Powered by Bootstrap 4 Github Pages</a>
-        </p>
+        <ul class="list-inline">
+          {%- for link in site.footer_links -%}
+          <li>
+            <a class="nav-link" href="{{ link.url | relative_url }}">{{ link.name | escape }}</a>
+          </li>
+          {% endfor -%}
+        </ul>
       </div>
-
     </div>
-
   </div>
 </div>

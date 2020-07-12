@@ -1,10 +1,6 @@
-// Solar 4.5.0
-// Bootswatch
+@import "./fonticons";
 
-//
-// Color system
-//
-
+/* Color sets */
 // stylelint-disable
 $white:    #fff !default;
 $gray-100: #FDF6E3 !default;
@@ -18,6 +14,8 @@ $gray-800: #073642 !default;
 $gray-900: #002B36 !default;
 $black:    #000 !default;
 
+$color-hoonio: #25a9e1;
+
 $blue:    #B58900 !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -29,7 +27,7 @@ $green:   #2AA198 !default;
 $teal:    #20c997 !default;
 $cyan:    #268BD2 !default;
 
-$primary:       $blue !default;
+$primary:       $color-hoonio !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -37,6 +35,9 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
+
+$md-navy: #0D47A1;
+$md-red: #D50000;
 
 $enable-gradients: true;
 
@@ -184,3 +185,22 @@ $close-text-shadow:                 none !default;
 // Code
 
 $pre-color:                         inherit !default;
+
+  ul {
+    margin-bottom: 0;
+    &.social-buttons li {
+      a span i.hoonio-stack-1x {
+        color: $gray-900;
+      }
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    &.list-inline li {
+      display: inline-block;
+      a.nav-link {
+        padding: 0.5rem;
+      }
+    }
+  }
+
