@@ -13,6 +13,12 @@ plugins:
   - jekyll-sitemap
 
 header_pages:
+  - index.md
+  - blog/index.md
+  - profile/index.md
+  - contact/index.md
+
+footer_links:
 
 exclude:
   - Gemfile
