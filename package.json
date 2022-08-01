@@ -1,0 +1,25 @@
+{
+  "name": "root",
+  "version": "0.0.1",
+  "description": "Jekyll Static Website",
+  "scripts": {
+    "start": "bundle exec jekyll serve",
+    "build": "bundle install",
+    "dev": "bundle exec jekyll serve --port 3001 --watch -l -o",
+    "update": "bundle update github-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoonio/hoonio.github.io.git"
+  },
+  "keywords": [
+    "Jekyll",
+    "GitHub"
+  ],
+  "author": "Hoonio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoonio/hoonio.github.io/issues"
+  },
+  "homepage": "https://github.com/hoonio/hoonio.github.io#readme"
+}

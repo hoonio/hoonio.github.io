@@ -1,0 +1,65 @@
+name: Workflow
+
+on:
+  push:
+    paths-ignore:
+    - 'package.json'
+
+jobs:
+  version:
+    name: Bump Version
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.semver.outputs.version }}
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - uses: paulhatch/semantic-version@v4.0.2
+      id: semver
+      with:
+        bump_each_commit: true
+  publish:
+    name: Publish to GitHub Pages
+    needs: version
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - name: Identify version
+      id: commit
+      run: |
+        echo "::set-output name=version::${{ needs.version.outputs.version }}"
+        if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then echo "::set-output name=stage::prod"; else echo "::set-output name=stage::dev"; fi
+    - uses:  helaili/jekyll-action@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        jekyll_build_options: "JEKYLL_ENV=${{ steps.commit.outputs.version }}"
+    - name: Save binary
+      uses: actions/upload-artifact@v3
+      with:
+        path: ~/work/pino/pino/build/distributions/pino.zip
+        name: binary
+  tag-version:
+    name: Release version
+    needs: [ version, publish ]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: "16.x"
+    - name: Tag version in repository
+      run: |
+        git config user.email "ci@hoonio.com"
+        git config user.name "Hoonio"
+        npm version ${{ needs.version.outputs.version }}
+        git tag -a ${{ needs.version.outputs.version }} -m "${{ github.event.head_commit.message }}"
+        git push origin ${{ needs.version.outputs.version }}

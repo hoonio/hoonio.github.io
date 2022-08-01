@@ -6,6 +6,7 @@ title: Bridging the gap between ideas and technology
 <div id="home">
   <header>
     <div class="intro-text">
+      <p>Root {% jekyll.environment %}</p>
       <p>Bridging the gap between ideas and technology</p>
     </div>
   </header>
