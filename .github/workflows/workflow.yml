@@ -31,16 +31,21 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-gems- 
-    - name: Identify version
+    - name: Build with Jekyll
       id: commit
       run: |
         echo "::set-output name=version::${{ needs.version.outputs.version }}"
         if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then echo "::set-output name=stage::prod"; else echo "::set-output name=stage::dev"; fi
         echo "VERSION=${{ needs.version.outputs.version }}" >> $GITHUB_ENV
-    - name: Build with Jekyll
-      uses: actions/jekyll-build-pages@v1
+        bundle install
+        github-pages build --verbose --source ./ --destination ./_site
+    # - name: Build with Jekyll
+    #   uses: actions/jekyll-build-pages@v1
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v0
+    - name: Check version
+      run: |
+        echo ${{ env.VERSION }}
   report:
     name: Report Build Status
     needs: build
@@ -52,7 +57,7 @@ jobs:
         emit_telemetry: true
   publish:
     name: Publish to GitHub Pages
-    needs: [ build, version ]
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -61,22 +66,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    # - uses: actions/checkout@v3
-    # - uses: actions/cache@v2
-    #   with:
-    #     path: vendor/bundle
-    #     key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-    #     restore-keys: |
-    #       ${{ runner.os }}-gems-
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1
-      # with:
-      #   token: ${{ secrets.GITHUB_TOKEN }}
-        # jekyll_build_options: "JEKYLL_ENV=production VERSION=${{ steps.commit.outputs.version }}"
-    - name: Check version
-      run: |
-        echo ${{ env.VERSION }}
   tag-version:
     name: Release version
     needs: [ version, publish ]
