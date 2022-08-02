@@ -37,13 +37,18 @@ jobs:
     - name: Build with Jekyll
       id: commit
       run: |
-        export BIN_VERSION=${{ needs.version.outputs.version }}
+        echo "VERSION=${{ needs.version.outputs.version }}" >> $GITHUB_ENV
+        echo "${{ env.VERSION }}"
         gem install jekyll bundler
         bundle install
         jekyll build --verbose
+        export BIN_VERSION=${{ needs.version.outputs.version }}
         echo "${{ env.BIN_VERSION }}"
       env:
         VERSION: ${{ env.BIN_VERSION }}
+        REP_VERSION: ${{ needs.version.outputs.version }}
+        GITENV_VERSION: ${{ env.VERSION }}
+        DUMMY_TEST: dummytext
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v0
     - name: Check version
