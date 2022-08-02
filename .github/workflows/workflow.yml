@@ -38,12 +38,10 @@ jobs:
       id: commit
       run: |
         export BIN_VERSION=${{ needs.version.outputs.version }}
-        echo "VERSION=${{ needs.version.outputs.version }}" >> $GITHUB_ENV
-        echo ${{ env.VERSION }}
-        echo ${{ env.BIN_VERSION }}
         gem install jekyll bundler
         bundle install
         jekyll build --verbose
+        echo "${{ env.BIN_VERSION }}"
       env:
         VERSION: ${{ env.BIN_VERSION }}
     - name: Upload artifact
