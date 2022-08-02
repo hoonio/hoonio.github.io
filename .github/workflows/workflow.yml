@@ -31,6 +31,12 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-gems- 
+    - name: Identify version
+      id: commit
+      run: |
+        echo "::set-output name=version::${{ needs.version.outputs.version }}"
+        if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then echo "::set-output name=stage::prod"; else echo "::set-output name=stage::dev"; fi
+        echo "VERSION=${{ needs.version.outputs.version }}" >> $GITHUB_ENV
     - name: Build with Jekyll
       uses: actions/jekyll-build-pages@v1
     - name: Upload artifact
@@ -62,12 +68,6 @@ jobs:
     #     key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
     #     restore-keys: |
     #       ${{ runner.os }}-gems-
-    - name: Identify version
-      id: commit
-      run: |
-        echo "::set-output name=version::${{ needs.version.outputs.version }}"
-        if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then echo "::set-output name=stage::prod"; else echo "::set-output name=stage::dev"; fi
-        echo "VERSION=${{ needs.version.outputs.version }}" >> $GITHUB_ENV
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1
