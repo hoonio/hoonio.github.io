@@ -37,14 +37,14 @@ jobs:
     - name: Build with Jekyll
       id: commit
       run: |
-        echo "::set-output name=version::${{ needs.version.outputs.version }}"
-        if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then echo "::set-output name=stage::prod"; else echo "::set-output name=stage::dev"; fi
         echo "VERSION=${{ needs.version.outputs.version }}" >> $GITHUB_ENV
         gem install jekyll bundler
         bundle install
+        echo ${{ env.VERSION }}
+        export BIN_VERSION=${{ needs.build.outputs.version }}
         jekyll build --verbose
-    # - name: Build with Jekyll
-    #   uses: actions/jekyll-build-pages@v1
+      env:
+        VERSION: ${{ env.BIN_VERSION }}
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v0
     - name: Check version
@@ -55,7 +55,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy to GitHub Pages
+    - name: Report Build Status
       uses: actions/deploy-pages@v1
       with:
         emit_telemetry: true
