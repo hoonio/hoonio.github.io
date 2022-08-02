@@ -31,10 +31,9 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-gems- 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
+    - uses: actions/setup-ruby@v1
       with:
-        ruby-version: '3.1'
+        ruby-version: '2.7'
     - name: Build with Jekyll
       id: commit
       run: |
