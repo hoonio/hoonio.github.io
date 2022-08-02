@@ -40,8 +40,9 @@ jobs:
         echo "::set-output name=version::${{ needs.version.outputs.version }}"
         if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then echo "::set-output name=stage::prod"; else echo "::set-output name=stage::dev"; fi
         echo "VERSION=${{ needs.version.outputs.version }}" >> $GITHUB_ENV
+        gem install jekyll bundler
         bundle install
-        github-pages build --verbose --source ./ --destination ./_site
+        jekyll build --verbose
     # - name: Build with Jekyll
     #   uses: actions/jekyll-build-pages@v1
     - name: Upload artifact
