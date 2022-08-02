@@ -54,8 +54,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      version: ${{ steps.commit.outputs.version }}
-      stage: ${{ steps.commit.outputs.stage }}
     steps:
     # - uses: actions/checkout@v3
     # - uses: actions/cache@v2
