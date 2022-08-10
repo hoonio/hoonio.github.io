@@ -1,40 +1,92 @@
 title: Hoonio
-email: ""
+email:
 description: >
-  Root relaunch with Jekyll and Github Pages
+  Bridging the gap between ideas and technology
 url: "https://hoonio.com"
 twitter_username: hoonio
 github_username:  hoonio
 
 repository: "hoonio/hoonio.github.io"
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+minimal_mistakes_skin: dark
+search: true
 
-header_pages:
-  - blog/index.md
-  - profile/index.md
-  - portfolio/index.md
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-social_links:
-  - name: facebook
-    url: https://hoon.io/link2fb
-  - name: instagram
-    url: https://hoon.io/1wGEoKi
-  - name: youtube
-    url: https://hoon.io/link2yt
-
-footer_links:
-  - name: Dory
-    url: https://dory.hoonio.com
-  - name: Feria
-    url: https://feria.hoonio.com
-  - name: Wiki
-    url: http://wiki.hoonio.com
+include:
+  - _pages
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - update_boostrap.sh
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji
+
+author:
+  name   : "Hoonio"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Engineer by trade, Stoic, Fiddler & Wanderer"
+  links:
+    - label: facebook
+      icon: "fab fa-fw fa-facebook"
+      url: https://hoon.io/link2fb
+    - label: instagram
+      icon: "fab fa-fw fa-instagram"
+      url: https://hoon.io/1wGEoKi
+    - label: youtube
+      icon: "fab fa-fw fa-youtube"
+      url: https://hoon.io/link2yt
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/hoonio"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hoonio"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: https://hoon.io/1wGEoKi
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      # author_profile: true
+      # read_time: true
+      # comments: true
+      # share: true
+      # related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      # author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
