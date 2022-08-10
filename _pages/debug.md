@@ -3,5 +3,8 @@ permalink: /debug/
 title: Debug
 ---
 
-  Root {{ jekyll.environment }} {{ site.env.VERSION }} {{ site.github_username }}
-  {{ site.env }}
+{{ jekyll.environment }} 
+{{ site.github_username }}
+{{ site.env.VERSION }} 
+{{ site.env }}
+{{ site }}
