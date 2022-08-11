@@ -5,6 +5,8 @@ title: Bridging the gap between ideas and technology
 header:
   overlay_color: "#5e616c"
   overlay_image: "https://lh3.googleusercontent.com/-uxpIOwYZfCM/VvAE1gOGbGI/AAAAAAAC14A/vAgBkPaGDF8vN3MqG1C8UzMMbsZm-F3VACCo/w2500-h1667-Ic42/Modestas-Urbonas-bridge.jpeg"
+  # overlay_filter: 0.8
+  overlay_filter: linear-gradient(rgba(255, 215, 0, 0.7), rgba(0, 255, 255, 0.5))
   # cta_label: "<i class='fa fa-download'></i> Install Now"
   # cta_url: "/docs/quick-start-guide/"
   # caption:
