@@ -1,0 +1,77 @@
+summary: Full Stack Developer specializing in Python & JavaScript
+work:
+  - client: Coats Group plc
+    url: https://coats.co.uk
+    title: Full Stack Developer
+    location: 'Remote|London, UK'
+    period: "Sep '19-Mar '20, Mar '21-Mar '22"
+    summary: eCommerce platform for threads order processing & administration for international market
+    tasks:
+      - UI design, form-based order & xls file upload processing (Next.js, Typescript, MaterialUI, GCS)
+      - Query & transformation of order/invoice data ⇄scaled number, byte array (Node.js, Moment)
+      - Client-server connectivity, unit|integration tests (GraphQL|gRPC, Kotlin, Jest|Cypress)
+      - Server-side OAuth2 flow|Auth0 permissions control (Kubernetes GKE, KongOIDC, Redis, JWT)
+      - Localization files & user metadata sync (Python|Pandas,Flask,  i18next, Auth0, Sharepoint)
+      - DevOps from the ground up (GCP, Concourse, Docker, Terraform, Cockroach, Snyk|Sonarqube)
+    stacks:
+      - React
+      - Next.js
+      - GraphQL
+      - TypeScript
+      - Cockroach
+      - Redis
+      - Google Cloud Platform
+  - client: HelpAge International
+    url: http://www.helpage.org
+    title: Python Developer
+    location: 'Remote|London, UK'
+    period: "Jul '13 - Jun '21"
+    summary: Periodical short-term works on big data transformation of surveyed information & visualization
+    tasks:
+      - Sharepoint file data extraction & persistence in database (GraphAPI, Django|Python, Postgres)
+      - Data cleansing, transformation & analytics of Rapid Needs Assessment (Pandas, NumPy)
+      - Deployment to serverless, CI/CD & testing (AWS Lambda, GitHub actions, CircleCI, Unittest)
+      - Interactive maps & graph presentation (Vue.js, D3, RGraph, Google maps/Fusion tables)
+    stacks:
+      - Django
+      - Pandas
+      - Vue.js
+      - Python
+      - Postgres
+      - AWS Lambda
+education:
+  - institution: Northwestern University 
+    location: Evanston, IL, USA
+    title: Master of Science in Computer Engineering
+    year: 2006
+    url: http://www.northwestern.edu
+  - institution: University of Illinois
+    location: Champaign, IL, USA
+    title: Bachelor of Science in Computer Engineering
+    year: 2005
+    url: http://engineering.illinois.edu
+publication:
+  - title: 'Power Deregulation: Eliminating off-chip voltage regulation'
+    link: http://hoon.io/powerderegieee
+  - title: Home Gateway
+    link: http://hoon.io/homegatewaygsrc
+certificate:
+  - title: Chartered Financial Analyst
+    link: http://www.cfainstitute.org/programs/cfaprogram/Pages/index.aspx
+  - title: Prince2
+    link: https://www.prince2.com/what-is-prince2
+  - title: Six Sigma green belt
+    link: https://en.wikipedia.org/wiki/Six_Sigma#Certification
+linguistic:
+  - language: English
+    fluency: native/bilingual
+  - language: Korean
+    fluency: native/bilingual
+  - language: Japanese
+    fluency: limited working N4
+  - language: German
+    fluency: limited working B1
+  - language: Spanish
+    fluency: elementary
+  - language: Latin
+    fluency: elementary
