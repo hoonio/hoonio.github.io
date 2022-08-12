@@ -31,14 +31,14 @@
           center: new google.maps.LatLng(24.346596615611777, 7.2),
           zoom: 2,
           minZoom: 2,
-          maxZoom: 6,
+          // maxZoom: 6,
           // mapTypeId: 'helpagemap',
           mapTypeId: 'terrain',
           mapTypeControl: false,
         });
 
-        var src = '{{site.url}}/assets/agewatch2014.kml';
-        // var src = '{{site.url}}/assets/cta.kml';
+        // var src = '{{site.url}}/assets/agewatch2014.kml';
+        var src = '{{site.url}}/assets/cta.kml';
         // var src = 'https://googlearchive.github.io/js-v2-samples/ggeoxml/cta.kml'
 
         var kmlLayer = new google.maps.KmlLayer(src, {
