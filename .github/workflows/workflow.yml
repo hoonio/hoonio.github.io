@@ -43,6 +43,8 @@ jobs:
         bundle install
         jekyll build --verbose
       env:
+        JEKYLL_ENV: production
+        MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
         VERSION: ${{ needs.version.outputs.version }}
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v0
