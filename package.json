@@ -4,9 +4,9 @@
   "description": "Jekyll Static Website",
   "scripts": {
     "start": "bundle exec jekyll serve",
-    "build": "jekyll build",
+    "build": "JEKYLL_ENV=production jekyll build",
     "bundle": "bundle install",
-    "dev": "VERSION=0.0.1 bundle exec jekyll serve --port 3001 --baseurl='' --watch -l -o",
+    "dev": "JEKYLL_ENV=development bundle exec jekyll serve --port 3001 --baseurl='' --watch -l -o",
     "update": "bundle update github-pages"
   },
   "repository": {
