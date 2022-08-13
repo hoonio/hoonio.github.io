@@ -1,77 +1,163 @@
 summary: Full Stack Developer specializing in Python & JavaScript
 work:
-  - client: Coats Group plc
-    url: https://coats.co.uk
-    title: Full Stack Developer
-    location: 'Remote/London, UK'
-    period: "Sep '19-Mar '20, Mar '21-Mar '22"
-    summary: eCommerce platform for threads order processing & administration for international market
-    tasks:
-      - UI design, form-based order & xls file upload processing (Next.js, Typescript, MaterialUI, GCS)
-      - Query & transformation of order/invoice data ⇄scaled number, byte array (Node.js, Moment)
-      - Client-server connectivity, unit/integration tests (GraphQL/gRPC, Kotlin, Jest/Cypress)
-      - Server-side OAuth2 flow/Auth0 permissions control (Kubernetes GKE, KongOIDC, Redis, JWT)
-      - Localization files & user metadata sync (Python/Pandas,Flask,  i18next, Auth0, Sharepoint)
-      - DevOps from the ground up (GCP, Concourse, Docker, Terraform, Cockroach, Snyk/Sonarqube)
-    stacks:
-      - React
-      - Next.js
-      - GraphQL
-      - TypeScript
-      - Cockroach
-      - Redis
-      - Google Cloud Platform
-  - client: HelpAge International
-    url: http://www.helpage.org
-    title: Python Developer
-    location: 'Remote/London, UK'
-    period: "Jul '13 - Jun '21"
-    summary: Periodical short-term works on big data transformation of surveyed information & visualization
-    tasks:
-      - Sharepoint file data extraction & persistence in database (GraphAPI, Django/Python, Postgres)
-      - Data cleansing, transformation & analytics of Rapid Needs Assessment (Pandas, NumPy)
-      - Deployment to serverless, CI/CD & testing (AWS Lambda, GitHub actions, CircleCI, Unittest)
-      - Interactive maps & graph presentation (Vue.js, D3, RGraph, Google maps/Fusion tables)
-    stacks:
-      - Django
-      - Pandas
-      - Vue.js
-      - Python
-      - Postgres
-      - AWS Lambda
+- client: Coats Group plc
+  url: https://coats.co.uk
+  title: Full Stack Developer
+  location: 'Remote/London, UK'
+  period: "Sep '19-Mar '20, Mar '21-Mar '22"
+  summary: eCommerce platform for threads order processing & administration for international market
+  tasks:
+  - UI design, form-based order & xls file upload processing (Next.js, Typescript, MaterialUI, GCS)
+  - Query & transformation of order/invoice data ⇄scaled number, byte array (Node.js, Moment)
+  - Client-server connectivity, unit/integration tests (GraphQL/gRPC, Kotlin, Jest/Cypress)
+  - Server-side OAuth2 flow/Auth0 permissions control (Kubernetes GKE, KongOIDC, Redis, JWT)
+  - Localization files & user metadata sync (Python/Pandas,Flask,  i18next, Auth0, Sharepoint)
+  - DevOps from the ground up (GCP, Concourse, Docker, Terraform, Cockroach, Snyk/Sonarqube)
+  stacks:
+  - React
+  - Next.js
+  - GraphQL
+  - TypeScript
+  - Cockroach
+  - Redis
+  - Google Cloud Platform
+- client: HelpAge International
+  url: http://www.helpage.org
+  title: Python Developer
+  location: 'Remote/London, UK'
+  period: "Jul '13 - Jun '21"
+  summary: Periodical short-term works on big data transformation of surveyed information & visualization
+  tasks:
+  - Sharepoint file data extraction & persistence in database (GraphAPI, Django/Python, Postgres)
+  - Data cleansing, transformation & analytics of Rapid Needs Assessment (Pandas, NumPy)
+  - Deployment to serverless, CI/CD & testing (AWS Lambda, GitHub actions, CircleCI, Unittest)
+  - Interactive maps & graph presentation (Vue.js, D3, RGraph, Google maps/Fusion tables)
+  stacks:
+  - Django
+  - Pandas
+  - Vue.js
+  - Python
+  - Postgres
+  - AWS Lambda
+- client: Falmouth Launchpad/Ramble
+  url: https://falmouthlaunchpad.co.uk/explore-launchpad/launchpad-companies/
+  title: Lead Developer
+  location: Remote/Penryn, UK
+  period: "May '19 - Jul '19"
+  summary: End to end podcast streaming service (AWS EC2, Nginx, Janus WebRTC, ffmpeg, Wowza, Twilio)
+- client: Ranger Services Ltd
+  title: Python Developer
+  url: https://groupnexus.co.uk/ranger-landing
+  location: London, UK
+  period: "Apr '19 - May '19"
+  summary: Big data query serverless microservices (Boto3, AWS Lambda, DynamoDB, Athena, Cognito)
+- client: Klarna Bank AB
+  url: https://www.klarna.com/de
+  title: Full Stack Developer
+  location: Berlin, Germany
+  period: "Mar '18 - Nov '18"
+  summary: Interactive customer authentication process (React/Redux, PostgreSQL, ElastiCache)
+  tasks:
+  - "API integration: Swisscom, Schufa, Sofort, ThreatMetrix (Flask, Node.js, Spring, Bash, SOAP)"
+  - Infrastructure migration (Terraform, AWS CloudFormation/S3, Docker, Jenkins, Jest/Enzyme)
+- client: Vodafone Group plc
+  url: https://www.vodafone.com/business/home
+  title: Full Stack Developer
+  location: Remote/London, UK
+  period: "Jul '16 - Mar '17"
+  summary: ITSM integrated enterprise cloud provisioning service (React/Redux, Babel, Mocha/Jest)
+  tasks:
+  - eCommerce UI, server-side scripting (Node.js, ServiceNow workflows/Glide API/jelly scripts)
+  - OAuth implementation, CI/CD (AD SSO, Docker, Rancher, Concourse, OpenStack)
+- client: Hoonio Ltd
+  url: https://www.hoonio.com
+  title: IT Consultant
+  location: London, UK
+  period: "Mar '10 - Present"
+  summary: Freelance & proprietary web/mobile app development, ad campaign accounts & consulting 
+  tasks:
+  - Web applications & infrastructure setup (WordPress/PHP, Golang, Flask, MongoDB, Scikit-learn)
+  - Hybrid mobile apps, native iOS app (Ionic, React Native, SoundCloud, Firebase, Objective-C)
+- client: Macat International Ltd
+  url: https://www.macat.com
+  title: Frontend Developer
+  location: London, UK
+  period: "Aug '15 - Dec '15"
+  summary: Online learning platform (AngularJS, WAI-AA/508 compliance, ElasticSearch, Azure)
+- client: Telrock Systems Ltd
+  url: https://www.telrock.com
+  title: Frontend Developer
+  location: London, UK
+  period: "Dec '14 - Jul '15"
+  summary: Retail loan service portal (AngularJS, Java/Spring MVC, socket.io, Sass Karma/Protractor)
+- client: Autharium Ltd
+  title: Frontend Developer
+  location: London, UK
+  period: "Jan '14 - Nov '14"
+  summary: Interactive ebook self-publishing tool (.Net MVC4/C#, CKEditor, Calibre, Braintree, ImageMagick)
+- client: London Organising Committee of the Olympic and Paralympic Games / Samsung
+  url: https://en.wikipedia.org/wiki/London_Organising_Committee_of_the_Olympic_and_Paralympic_Games
+  title: Mobile Apps Development Manager
+  location: London, UK
+  period: "Jan '11 - Sep '12"
+  summary: Supervision of mobile apps development & branded handsets delivery for London2012 Olympics
+  tasks:
+  - Business requirements, budget control, risk assessment, tech supports training (ServiceNow)	
+  - Offshore 3rd-party development management, agile transformation, system architecture review
+- client: Schneider Associates
+  title: Brent Crude Futures Trader
+  location: London, UK
+  period: "Sep '10 - Dec '10"
+  summary: Intra-day trading & technical analysis of ICE Brent Crude & Euribor future contracts
+- client: LG Electronics Inc
+  url: https://www.lg.com/jp/mobile-phone/lg-L-03C
+  title: Software Research Engineer
+  location: Seoul, South Korea
+  period: "Aug '06 - Feb '10"
+  summary: "Mobile handset prototype development: L-03C (C, Java, Python, Assembly on ARM-MSM 72XX)"	
+  tasks:
+  - I/O, graphic device driver, camera control I2C protocol implementation (VHDL, iCE65 FPGA)
+  - USB throughput & security opmitization for device configuration/QA tool LGNPST (C++, MFC)
+  - Patent research, msi packaging, technical documentation/source control (LaTex, svn)
+- client: University of Illinois CRHC
+  url: http://impact.crhc.illinois.edu/
+  title: Research Assistant
+  location: Urbana, IL, USA
+  period: "Jun '05 - Sep '05"
+  summary: Hardware optimization for MP3 streaming over WLAN & decoding on FPGA (VHDL, x86 Assembly)
 education:
-  - institution: Northwestern University 
-    location: Evanston, IL, USA
-    title: Master of Science in Computer Engineering
-    year: 2006
-    url: http://www.northwestern.edu
-  - institution: University of Illinois
-    location: Champaign, IL, USA
-    title: Bachelor of Science in Computer Engineering
-    year: 2005
-    url: http://engineering.illinois.edu
+- institution: Northwestern University 
+  location: Evanston, IL, USA
+  title: Master of Science in Computer Engineering
+  year: 2006
+  url: http://www.northwestern.edu
+- institution: University of Illinois
+  location: Champaign, IL, USA
+  title: Bachelor of Science in Computer Engineering
+  year: 2005
+  url: http://engineering.illinois.edu
 publication:
-  - title: 'Power Deregulation: Eliminating off-chip voltage regulation'
-    link: http://hoon.io/powerderegieee
-  - title: Home Gateway
-    link: http://hoon.io/homegatewaygsrc
+- title: 'Power Deregulation: Eliminating off-chip voltage regulation'
+  link: http://hoon.io/powerderegieee
+- title: Home Gateway
+  link: http://hoon.io/homegatewaygsrc
 certificate:
-  - title: Chartered Financial Analyst
-    link: http://www.cfainstitute.org/programs/cfaprogram/Pages/index.aspx
-  - title: Prince2
-    link: https://www.prince2.com/what-is-prince2
-  - title: Six Sigma green belt
-    link: https://en.wikipedia.org/wiki/Six_Sigma#Certification
+- title: Chartered Financial Analyst
+  link: http://www.cfainstitute.org/programs/cfaprogram/Pages/index.aspx
+- title: Prince2
+  link: https://www.prince2.com/what-is-prince2
+- title: Six Sigma green belt
+  link: https://en.wikipedia.org/wiki/Six_Sigma#Certification
 linguistic:
-  - language: English
-    fluency: native/bilingual
-  - language: Korean
-    fluency: native/bilingual
-  - language: Japanese
-    fluency: limited working N4
-  - language: German
-    fluency: limited working B1
-  - language: Spanish
-    fluency: elementary
-  - language: Latin
-    fluency: elementary
+- language: English
+  fluency: native/bilingual
+- language: Korean
+  fluency: native/bilingual
+- language: Japanese
+  fluency: limited working N4
+- language: German
+  fluency: limited working B1
+- language: Spanish
+  fluency: elementary
+- language: Latin
+  fluency: elementary

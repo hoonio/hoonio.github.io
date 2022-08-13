@@ -1,9 +1,9 @@
 main:
-  # - title: "Profile"
-  #   url: /profile/
+  - title: "Profile"
+    url: /about/
   # - title: "Blog"
   #   url: /blog/
   # - title: "Portfolio"
   #   url: /portfolio/
-  - title: "Contact"
-    url: /#contact/
+  # - title: "Contact"
+  #   url: /#contact/
