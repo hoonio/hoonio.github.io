@@ -3,16 +3,16 @@ work:
   - client: Coats Group plc
     url: https://coats.co.uk
     title: Full Stack Developer
-    location: 'Remote|London, UK'
+    location: 'Remote/London, UK'
     period: "Sep '19-Mar '20, Mar '21-Mar '22"
     summary: eCommerce platform for threads order processing & administration for international market
     tasks:
       - UI design, form-based order & xls file upload processing (Next.js, Typescript, MaterialUI, GCS)
       - Query & transformation of order/invoice data ⇄scaled number, byte array (Node.js, Moment)
-      - Client-server connectivity, unit|integration tests (GraphQL|gRPC, Kotlin, Jest|Cypress)
-      - Server-side OAuth2 flow|Auth0 permissions control (Kubernetes GKE, KongOIDC, Redis, JWT)
-      - Localization files & user metadata sync (Python|Pandas,Flask,  i18next, Auth0, Sharepoint)
-      - DevOps from the ground up (GCP, Concourse, Docker, Terraform, Cockroach, Snyk|Sonarqube)
+      - Client-server connectivity, unit/integration tests (GraphQL/gRPC, Kotlin, Jest/Cypress)
+      - Server-side OAuth2 flow/Auth0 permissions control (Kubernetes GKE, KongOIDC, Redis, JWT)
+      - Localization files & user metadata sync (Python/Pandas,Flask,  i18next, Auth0, Sharepoint)
+      - DevOps from the ground up (GCP, Concourse, Docker, Terraform, Cockroach, Snyk/Sonarqube)
     stacks:
       - React
       - Next.js
@@ -24,11 +24,11 @@ work:
   - client: HelpAge International
     url: http://www.helpage.org
     title: Python Developer
-    location: 'Remote|London, UK'
+    location: 'Remote/London, UK'
     period: "Jul '13 - Jun '21"
     summary: Periodical short-term works on big data transformation of surveyed information & visualization
     tasks:
-      - Sharepoint file data extraction & persistence in database (GraphAPI, Django|Python, Postgres)
+      - Sharepoint file data extraction & persistence in database (GraphAPI, Django/Python, Postgres)
       - Data cleansing, transformation & analytics of Rapid Needs Assessment (Pandas, NumPy)
       - Deployment to serverless, CI/CD & testing (AWS Lambda, GitHub actions, CircleCI, Unittest)
       - Interactive maps & graph presentation (Vue.js, D3, RGraph, Google maps/Fusion tables)
