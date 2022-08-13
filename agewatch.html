@@ -1,53 +1,71 @@
 ---
 ---
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>KML Click Capture Sample</title>
-    <style>
-      html, body {
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8" />
+    <title>AgeWatch Index 2013 - Hoonio</title>
+		<style>
+			html,
+			body {
         height: 100%;
-        padding: 0;
         margin: 0;
-        }
-      #map {
-       height: 100%;
-       width: 100%;
-       overflow: hidden;
-       float: left;
-       border: thin solid #333;
-       }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      // var map;
-
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: new google.maps.LatLng(24.346596615611777, 7.2),
-          zoom: 2,
-          minZoom: 2,
-          maxZoom: 6,
-          // mapTypeId: 'helpagemap',
-          mapTypeId: 'terrain',
-          mapTypeControl: false,
-        });
-
-        var src = '{{site.url}}/assets/agewatch2014.kml';
-
-        var kmlLayer = new google.maps.KmlLayer(src, {
-          suppressInfoWindows: false,
-          preserveViewport: false,
-          map: map
-        });
+        padding: 0;
       }
-    </script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key={{ site.env.MAPS_API_KEY }}&callback=initMap">
-    </script>
-  </body>
+      #map {
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+      #legend {
+        background: white;
+        padding: 5px;
+      }
+		</style>
+	</head>
+	<body>
+    <div id="legend" style="font-family: Verdana; font-size: 12px; color: #666666;"><a style="font-family: Verdana; font-size: 12px; font-weight:bold; color: #F25821; text-decoration: none" href="http://www.helpage.org/global-agewatch/data/global-rankings/" target="_blank">AgeWatch</a> index rankings</div>
+		<div id="map"></div>
+		<script>
+      let map;
+
+      function appendLegend() {
+        const legend = document.getElementById("legend");
+        var div = document.createElement('div');
+        div.innerHTML =
+          '<img src="//bit.ly/helpagemapscale"><br> <span style="display: block; font-family: Verdana; font-size: 12px; color: #666666; text-align: right;"> Map created by <a style="font-family: Verdana; font-size: 12px; font-weight:bold; color: #F25821; text-decoration: none" href="http://www.hoonio.com" target="_blank">Hoonio</a> / <a style="font-family: Verdana; font-size: 12px; font-weight:bold; color: #F25821; text-decoration: none" href="http://www.datakind.org.uk/" target="_blank">DataKind UK</a>.</span>'
+        legend.appendChild(div);
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+      }
+
+			function initMap() {
+        // google.maps.visualRefresh = true;
+				map = new google.maps.Map(document.getElementById('map'), {
+          mapId: "3651bc6cdfbc2b23",
+          center: { lat: 24.35, lng: 7.2 },
+					zoom: 3,
+					minZoom: 2,
+					maxZoom: 6,
+					mapTypeControl: false,
+          disableDefaultUI: true,
+				})
+
+        var url = '{{site.url}}/assets/agewatch2014.kml'
+        // var url = 'https://git.hoonio.com/assets/agewatch2014.kml'
+        const kmlLayer = new google.maps.KmlLayer({
+          preserveViewport: false,
+          map,
+          url,
+        });
+       
+        appendLegend()
+			}
+		</script>
+		<script
+			async
+			src="https://maps.googleapis.com/maps/api/js?key={{ site.env.MAPS_API_KEY }}&callback=initMap"
+		></script>
+	</body>
 </html>
