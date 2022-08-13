@@ -1,18 +1,30 @@
 ---
 permalink: /about/
-title: "About"
 author_profile: false
-sidebar: 
+sidebar:
   - title: Hoon Kim
-    image: http://placehold.it/350x250
-    image_alt: "image"
-  - text: "104 Gifford Street, London N1 0DF"
-  - text: "+44 73 6161 5539"
-  - text: "recruit@hoonio.com"
-  - text: "github.com/hoonio"
+    # image: http://placehold.it/350x250
+    # image_alt: "image"
+  - text: 'London N1 0DF'
+  - text: 'recruit@hoonio.com'
+  - text: 'github.com/hoonio'
 ---
 
-<article class="resume-wrapper text-center position-relative">
+# Experience
+
+{% for post in site.data.resume.work %}
+
+## {{ post.title }}
+
+<address>{{ post.client }}</address> _{{ post.period }}_
+
+{{ post.summary }} {% for task in post.tasks %}
+
+- {{ task }} {% endfor %}
+
+{% for stack in post.stacks %}[{{ stack }}](#){: .btn .btn--primary .btn--small} {% endfor %} {% endfor %}
+
+<!-- <article class="resume-wrapper text-center position-relative">
   <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
     <div class="resume-body p-5">
       <section class="resume-section summary-section mb-5">
@@ -20,7 +32,11 @@ sidebar:
         <div class="resume-section-content">
           <p class="mb-0">{{ site.data.resume.summary }}</p>
         </div>
-      </section><!--//summary-section-->
+      </section>
+      <button class="mdc-button foo-button">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Button</span>
+      </button>
       <div class="row">
         <div class="col-lg-9">
           <section class="resume-section experience-section mb-5">
@@ -39,13 +55,23 @@ sidebar:
                       <li>{{ task }}</li>
                       {% endfor %}
                     </ul>
-                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Tech stacks</h4>
-                    <ul>
-                      {% for stack in post.stacks %}
-                      <li>{{ stack }}</li>
-                      {% endfor %}
-                    </ul>
+                    <span class="mdc-evolution-chip-set" role="grid">
+                      <span class="mdc-evolution-chip-set__chips" role="presentation">
+                        [Primary Button Text](#link){: .btn .btn--primary}
+                        {% for stack in post.stacks %}
+                        <span class="mdc-evolution-chip" role="row" id="c1">
+                          <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
+                            <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
+                              <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+                              <span class="mdc-evolution-chip__text-label">{{ stack }}</span>
+                            </button>
+                          </span>
+                        </span>
+                        {% endfor %}
+                      </span>
+                    </span>
                   </div><!--//resume-timeline-item-desc-->
+
                </article>
               {% endfor %}
              </div><!--//resume-timeline-->
@@ -96,4 +122,4 @@ sidebar:
     </div><!--//resume-body-->
 
  </div>
-</article>
+</article> -->
