@@ -6,7 +6,7 @@
     "start": "bundle exec jekyll serve",
     "build": "JEKYLL_ENV=production jekyll build",
     "bundle": "bundle install",
-    "dev": "JEKYLL_ENV=development bundle exec jekyll serve --port 3001 --baseurl='' --watch -l -o",
+    "dev": "export $(grep -v '^#' .env | xargs) && bundle exec jekyll serve --port 3001 --baseurl='' --watch -l -o",
     "update": "bundle update github-pages"
   },
   "repository": {
