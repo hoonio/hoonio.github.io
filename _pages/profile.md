@@ -5,9 +5,21 @@ sidebar:
   - title: Hoon Kim
     # image: http://placehold.it/350x250
     # image_alt: "image"
-  - text: 'London N1 0DF'
+    text: 'London N1 0DF'
   - text: 'recruit@hoonio.com'
+  - text: 'twitter.com/hoonio'
+  - text: 'linkedin.com/hoonio'
   - text: 'github.com/hoonio'
+    url: 'github.com'
+  # - title: Download in
+  #   children:
+  #     - title: 'Google Docs'
+  #       url: 'https://hoon.io/cv15goog'
+  #     - title: 'Microsoft Word'
+  #       url: 'https://hoon.io/cv15doc'
+  #     - title: 'PDF'
+  #       url: 'https://hoon.io/cv15pdf'
+
 ---
 
 ## Work Experience

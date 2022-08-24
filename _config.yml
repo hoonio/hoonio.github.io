@@ -11,6 +11,8 @@ repository: "hoonio/hoonio.github.io"
 
 minimal_mistakes_skin: dark
 search: true
+atom_feed:
+  hide: true
 
 # Build settings
 # markdown: kramdown
@@ -44,15 +46,9 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Engineer by trade, Stoic, Fiddler & Wanderer"
   links:
-    - label: facebook
-      icon: "fab fa-fw fa-facebook"
-      url: https://hoon.io/link2fb
     - label: instagram
       icon: "fab fa-fw fa-instagram"
       url: https://hoon.io/1wGEoKi
-    - label: youtube
-      icon: "fab fa-fw fa-youtube"
-      url: https://hoon.io/link2yt
 
 footer:
   links:
@@ -62,9 +58,12 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/hoonio"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: https://hoon.io/1wGEoKi
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: https://hoon.io/link2in
+    - label: youtube
+      icon: "fab fa-fw fa-youtube"
+      url: https://hoon.io/link2yt
 
 defaults:
   # _posts
