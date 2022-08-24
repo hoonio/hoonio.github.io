@@ -33,7 +33,6 @@ exclude:
 # Plugins (previously gems:)
 plugins:
   - jekyll-environment-variables
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-include-cache
   - jekyll-paginate
