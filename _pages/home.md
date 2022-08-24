@@ -22,14 +22,10 @@ feature_row:
     alt: "fully responsive"
     title: "Online Marketing"
     excerpt: "Search Engine Optimization, Google Analytics/Tag Manager configuration, Google AdWords/Facebook Ads campaign setup and reporting"
-    # url: "/docs/layouts/"
-    # btn_label: "Learn More"
   - image_path: assets/images/mm-free-feature.png
     alt: "100% free"
     title: "Consultancy Services"
     excerpt: "Extra services available upon request: data visualization, mobile applications development, financial analysis, graphic design, et cetera"
-    # url: "/docs/license/"
-    # btn_label: "Learn More"
 feature_row2:
   - image_path: "https://lh3.googleusercontent.com/mvwsxK_jpFHLoteeScrcnP1_D1dIO_mv92oyy5AhXDZ8DQ9rOMVI9FajP6dt32Yma9CHr59NbsQStRuyQN2GzU764EHtgjSxRqpkkw=w569-h320-rw-no"
     alt: "Feria cum Hoonio"
@@ -57,3 +53,5 @@ intro:
 {% include feature_row id="feature_row2" type="left" %}
 
 {% include feature_row id="feature_row3" type="right" %}
+
+{% include contact.html %}
