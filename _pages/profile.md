@@ -1,5 +1,5 @@
 ---
-permalink: /about/
+permalink: /profile/
 author_profile: false
 sidebar:
   - title: Hoon Kim
