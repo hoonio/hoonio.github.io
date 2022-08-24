@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "version": "0.0.1",
+  "version": "2.7.10",
   "description": "Jekyll Static Website",
   "scripts": {
     "start": "bundle exec jekyll serve",
